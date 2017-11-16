@@ -1,6 +1,6 @@
 autowatch = 1;
 inlets = 3;
-outlets = 1;
+outlets = 2;
 
 var lifePoints = 999;
 var gameOver = false;
@@ -329,7 +329,7 @@ Particle7.prototype.isDead = function () {
 
 var myListener = new JitterListener (myWindow.getregisteredname(), pointer);
 
-// create a [jit.gl.gridshape] object for use to control with the mouse
+// create a object for use to control with the mouse
 var myWidget = new JitterObject("jit.gl.gridshape","Particles");
 myWidget.shape = "sphere";
 myWidget.lighting_enable = 1;
@@ -373,6 +373,7 @@ function pointer(event) {
         myWidget.position = myRender.screentoworld(x, y);
     }
 }
+
 // don't allow this function to be called from Max
 pointer.local = 1;
 
@@ -396,6 +397,7 @@ function noPause() {
 	    {
 		pArray[i].lifespan = 0;
 		lifePoints = lifePoints - 1;
+		outlet(1,1);
 	    }
 	}
 	
