@@ -1,4 +1,4 @@
-# Particles
+ # Particles
 
 This computer app is a simple game designed to be played by two people. 
 
@@ -11,8 +11,8 @@ While this application could have been built purely in Max, I chose to use Javas
 Developer & Designer: Tyrrell Serrano (Solo project)
 
 To do:
-Particles aren't functioning correctly
-And circle button isn't consistent.
-Sound isn't playing
+Particles aren't functioning correctly (fixed)
+And circle button isn't consistent. (fixed)
+Sound isn't playing (fixed)
 Collision isn't consistent, player two and player one can 
-collide freely.
+collide freely. (fixed)
