@@ -49,7 +49,7 @@ var globalStick2 = 0;
 function msg_int(v){
 	if (inlet==1){ 
 		if (v > 32760){
-	v = v / 100000;
+	v = v / 187000;
 	globalStick1 = v;
 }
 
@@ -66,7 +66,7 @@ function msg_int(v){
 }
 
 		else if (v > 32760){
-	v = ( (v / 100000) * -1)
+	v = ( (v / 187000) * -1)
 	globalStick2 = v;
 }
 
@@ -81,7 +81,7 @@ var total = 100;
 function draw2() {
 	
 	pArray.push(new Particle2());
-	pArray.push(new Particle2());
+	pArray.push(new Particle3());
 	
 	for(var i = pArray.length-1; i >= 0; i--) {
 		pArray[i].run();
@@ -93,15 +93,6 @@ function draw2() {
 
 function draw3() {
 	
-	pArray.push(new Particle3());
-	pArray.push(new Particle3());
-
-	for(var i = pArray.length-1; i >= 0; i--) {
-		pArray[i].run();
-		if(pArray[i].isDead()) {
-			pArray.splice(i, 1);
-		}
-	}
 }
 
 function draw5() {
